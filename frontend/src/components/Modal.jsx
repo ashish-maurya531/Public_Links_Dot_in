@@ -15,7 +15,7 @@ const Modal = ({ isOpen, onClose, result }) => {
       <motion.div
   className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg w-full max-w-lg mx-4 border border-gray-200 dark:border-gray-700"
   initial={{ scale: 0.95, y: -100 }}
-  animate={{ scale: 1, y: -350 }}
+  animate={{ scale: 1, y: -80 }}
   transition={{ duration: 0.2 }}
   onClick={(e) => e.stopPropagation()}
 >

@@ -1,6 +1,3 @@
-
-
-
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Copy, AlertCircle} from 'lucide-react'
@@ -12,16 +9,16 @@ const Modal = ({ isOpen, onClose, result }) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+      className="fixed inset-0 z-50  flex items-center justify-center bg-black bg-opacity-50 max-sm:top-[8rem]"
       onClick={onClose}
     >
       <motion.div
-        className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md w-full max-w-md mx-4 border border-gray-200 dark:border-gray-700"
-        initial={{ scale: 0.95 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.3 }}
-        onClick={(e) => e.stopPropagation()}
-      >
+  className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg w-full max-w-lg mx-4 border border-gray-200 dark:border-gray-700"
+  initial={{ scale: 0.95, y: -100 }}
+  animate={{ scale: 1, y: -210 }}
+  transition={{ duration: 0.2 }}
+  onClick={(e) => e.stopPropagation()}
+>
         {isLinkNotFound ? (
           <div className="flex flex-col items-center justify-center py-6">
             <AlertCircle size={50} color='#a859f2'></AlertCircle>
@@ -42,17 +39,13 @@ const Modal = ({ isOpen, onClose, result }) => {
               >
              
               </button>
-              <span className="text-sm text-gray-500 dark:text-gray-400 ml-72">VPN</span>
+              <span className=" flex text-sm text-gray-500 dark:text-gray-400 mr-6">VPN 
               <motion.button
-                className={`w-2 h-6 flex items-center rounded-full p-1 ${result.requiresVpn ? 'bg-purple-600' : 'bg-gray-300'}`}
+                className={`ml-2 w-2 h-6 flex items-center rounded-full p-1 ${result.requiresVpn ? 'bg-purple-600' : 'bg-gray-300'}`}
                 disabled
               >
-                <motion.div
-                  className={`bg-white w-5 h-5 rounded-full shadow-md transform ${result.requiresVpn ? 'translate-x-6' : ''}`}
-                  layout
-                  transition={{ type: 'spring', stiffness: 700, damping: 30 }}
-                />
-              </motion.button>
+              
+              </motion.button></span>
             </div>
 
             <div className="flex items-center justify-between mb-3">

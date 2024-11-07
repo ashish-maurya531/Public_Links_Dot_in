@@ -773,8 +773,8 @@ const Search = ({ onSearch, onClearSearch, isSearchActive }) => {
   };
 
   return (
-    <div className="bg-purple-100 dark:bg-gray-900 px- py-2 flex items-center justify-evenly w-full">
-      <div className="flex items-center bg-white dark:bg-gray-800 rounded-full px-4 py-2 w-full max-w-md shadow-md">
+    <div className="bg-purple-100 dark:bg-gray-900 px-0 py-2 flex items-center justify-evenly w-full">
+      <div className="flex items-center bg-white dark:bg-gray-800 rounded-full px-4 py-2 w-full ml-3 mr-3 max-w-md shadow-md">
         <SearchIcon className="text-gray-500 dark:text-gray-400 mr-2" />
         <input
           type="text"

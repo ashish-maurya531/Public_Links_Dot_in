@@ -136,9 +136,10 @@ const Post = ({ id, message, timestamp, vpnEnabled: initialVpnEnabled, isNew = f
       className={`bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md mb-4 ${
         isHighlighted ? 'ring-2 ring-purple-500' : ''
       }`}
-      initial={isHighlighted ? { scale: 0.95 } : {}}
-      animate={isHighlighted ? { scale: 1 } : {}}
-      transition={{ duration: 0.3 }}
+      initial={{ scale: 0,y:500 }}
+      animate={{ scale: 1 ,y:0}}
+      
+      transition={isNew?{duration:0.1}:{ duration: 0.2 }}
     >
       <div className="flex items-center justify-between mb-1">
         <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">

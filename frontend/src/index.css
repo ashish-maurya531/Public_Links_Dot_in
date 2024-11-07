@@ -10,24 +10,9 @@
 
 }
 
-@layer utilities {
-  .scrollbar::-webkit-scrollbar {
-    width: 7px;
-  
-  }
-
-  .scrollbar::-webkit-scrollbar-track {
-    border-radius: 100vh;
-    background: 1f2937;
-  }
-
-  .scrollbar::-webkit-scrollbar-thumb {
-    background: #7e22cd;
-    border-radius: 100vh;
-    height: 30px;
-  }
-
-  .scrollbar::-webkit-scrollbar-thumb:hover {
-    cursor:pointer;
-  }
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+
+/*------------------*/

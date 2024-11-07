@@ -303,7 +303,7 @@ export default function App() {
       // setIsLoading(true)
       // Introduce a delay of 2 seconds
       // await new Promise(resolve => setTimeout(resolve, 2000))
-      const response = await fetch(`http://localhost:5000/api/links?page=${pageNum}&limit=10`)
+      const response = await fetch(`https://public-links-dot-in.onrender.com/api/links?page=${pageNum}&limit=10`)
       const data = await response.json()
       
       setPosts(prev => {
@@ -326,7 +326,7 @@ export default function App() {
   useEffect(() => {
     pollInterval.current = setInterval(async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/links/new?lastUpdate=${lastUpdate}`)
+        const response = await fetch(`https://public-links-dot-in.onrender.com/api/links/new?lastUpdate=${lastUpdate}`)
         const newPosts = await response.json()
         
         if (newPosts.length > 0) {
@@ -350,7 +350,7 @@ export default function App() {
   const handleSearch = async (id) => {
     try {
       setIsSearchActive(true)
-      const response = await fetch(`http://localhost:5000/api/links/search/${id}`)
+      const response = await fetch(`https://public-links-dot-in.onrender.com/api/links/search/${id}`)
       const data = await response.json()
       
       if (data) {
@@ -373,7 +373,7 @@ export default function App() {
 
   const handleNewPost = async (postData) => {
     try {
-      const response = await fetch('http://localhost:5000/api/links', {
+      const response = await fetch('https://public-links-dot-in.onrender.com/api/links', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

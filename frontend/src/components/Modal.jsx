@@ -9,7 +9,7 @@ const Modal = ({ isOpen, onClose, result }) => {
 
   return (
     <div
-      className="fixed inset-0 z-50  flex items-center justify-center bg-black bg-opacity-50 max-sm:top-[8rem]"
+      className="fixed inset-0 z-50  flex items-center justify-center bg-black bg-opacity-50 max-sm:top-[20rem]"
       onClick={onClose}
     >
       <motion.div

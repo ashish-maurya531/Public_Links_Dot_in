@@ -9,13 +9,13 @@ const Modal = ({ isOpen, onClose, result }) => {
 
   return (
     <div
-      className="fixed inset-0 z-50  flex items-center justify-center bg-black bg-opacity-50 max-sm:top-[20rem]"
+      className="fixed inset-0 z-50  flex items-center justify-center bg-black bg-opacity-50 max-sm:top-[8rem]"
       onClick={onClose}
     >
       <motion.div
   className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg w-full max-w-lg mx-4 border border-gray-200 dark:border-gray-700"
   initial={{ scale: 0.95, y: -100 }}
-  animate={{ scale: 1, y: -210 }}
+  animate={{ scale: 1, y: -350 }}
   transition={{ duration: 0.2 }}
   onClick={(e) => e.stopPropagation()}
 >
